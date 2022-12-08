@@ -5,10 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Report</title>
+    <link href="styles/index.css" rel="stylesheet">
+    <link href="src/index.js" rel="javascript">
 </head>
-<body>
+    <body>
+<!-- <body cz-shortcut-listen="true"> -->
+    <header class="header_header">
+        <h1>Weather Report</h1>
+        <span>
+            For the city of 
+            <span id="headerCityName" class="header_city-name"> 
+                <!-- ::before -->
+                BOSTON
+                <!-- ::after -->
+            </span>
+        </span>
+    </header>
+    <section class="temperature_section">
+        <h2>Temperature</h2>
+        <div class="temperature_content">
+            <div class="temperature_controls">
+                <span id="increaseTempControl">⬆️</span>
+                <span id="tempValue" class="orange">72</span>
+                <span id="decreaseTempControl">⬇️</span>
+            </div>
+            <button id="currentTempButton">Get Realtime Temperature</button>
+        </div>
+    </section>
+    <section class="sky_section">
+        <h2>Sky</h2>
+        <select id="skySelect">
+            <option>Sunny</option>
+            <option>Cloudy</option>
+            <option>Rainy</option>
+            <option>Snowy</option>
+        </select>
+    </section>
+    <section class="city-name_section">
+        <h2>City Name</h2>
+        <input type="text" id="cityNameInput" value="Boston">
+        <button id="cityNameReset" class="city-name_reset-btn">Reset</button>
+    </section>
+    <section class="garden_section">
+        <h2>Weather Garden</h2>
+        <div id="gardenContent" class="garden_content sunny">
+            <div id="sky">☁️☁️☀️☁️</div>
+            <div id="landscape">🌳🌸🌼🌺🌿🏔</div>
+        </div>
+    </section>
     <script src="./node_modules/axios/dist/axios.min.js"></script>
-    <link href="styles/index.css" rel="stylesheet" />
-    <link href="src/index.js" rel="javascript" />
 </body>
 </html>

@@ -1,0 +1,43 @@
+html {
+    display: block;
+    /* height: 1400px; 
+    width: 150px;  */
+}
+
+
+
+.header_city-name {
+    font-style: oblique;
+    font-size: 2rem;
+}
+
+.header_header {
+    color: aquamarine;
+    grid-column: span 3;
+    display: flex;
+    align-items: center;
+    margin: 2rem auto 3rem 0;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto auto auto;
+    grid-gap: 1rem;
+    font-family: Verdana, sans-serif;
+    font-size: 18px;
+    background-color: mintcream;
+    /* margin: 2rem; */
+    margin: 8px 32px 32px 32px;
+
+}
+
+.header_city-name:after, .header_city-name:before {
+    content: "🌾";
+}
+
+/* grid overlays: body
+flexbox overlays: header.header_header
+    div.temperature_content
+    div.temperature_controls
+    div#gardenContent.garden_content.sunny */
